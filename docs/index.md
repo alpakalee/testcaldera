@@ -24,8 +24,7 @@ Self-Correction from Cyber Threat Intelligence Using LLM
 </p>
 
 <p>
-  <a href="#" style="display: inline-block; margin: 0 0.3em; padding: 0.45em 1.1em; background: #1a1a2e; color: white; border-radius: 5px; text-decoration: none; font-size: 0.95em;">📄 Paper</a>
-  <a href="https://github.com/alpakalee/caldera-attack-automation" style="display: inline-block; margin: 0 0.3em; padding: 0.45em 1.1em; background: #24292e; color: white; border-radius: 5px; text-decoration: none; font-size: 0.95em;">💻 Code</a>
+  <a href="https://github.com/alpakalee/testcaldera" style="display: inline-block; margin: 0 0.3em; padding: 0.45em 1.1em; background: #24292e; color: white; border-radius: 5px; text-decoration: none; font-size: 0.95em;">💻 Code</a>
   <a href="#demo" style="display: inline-block; margin: 0 0.3em; padding: 0.45em 1.1em; background: #c0392b; color: white; border-radius: 5px; text-decoration: none; font-size: 0.95em;">🎬 Demo</a>
 </p>
 

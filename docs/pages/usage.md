@@ -40,7 +40,13 @@ python main.py --step STEPS --pdf PDF_PATH --env ENV_PATH [options]
 | `--pdf` | path | yes | Path to KISA CTI PDF file |
 | `--env` | path | yes | Path to environment specification Markdown file |
 | `--version-id` | string | no | Custom version ID (default: timestamp) |
-| `--llm` | string | no | LLM provider override: `claude`, `openai`, `gemini`, `grok` |
+| `--output-dir` | path | no | Output directory (default: `data/processed`) |
+| `--operation-name` | string | no | Caldera operation name (default: auto-generated) |
+| `--agent-paw` | string | no | Target specific Caldera agent PAW |
+| `--skip-upload` | flag | no | Skip ability upload (if already uploaded) |
+| `--skip-execution` | flag | no | Skip execution, use existing operation report |
+
+LLM provider는 `.env`의 `LLM_PROVIDER` 값으로 설정합니다 (`claude` / `openai` / `gemini` / `grok`).
 
 ---
 
