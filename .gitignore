@@ -15,6 +15,7 @@ env/
 .vscode/
 .idea/
 .claude/
+.cursorrules
 
 # OS
 .DS_Store
@@ -22,3 +23,6 @@ Thumbs.db
 
 # Results
 data/processed/
+
+data/논문
+reports/
