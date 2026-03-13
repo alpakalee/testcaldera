@@ -123,15 +123,14 @@ Get-WmiObject -Class Win32_UserAccount -Filter "Domain='$env:USERDOMAIN'" |
 
 ## Results
 
-{: .note }
-> Values below are placeholders — see paper for final results.
-
 | Metric | Value |
 |--------|-------|
-| Initial success rate (Claude Sonnet 4.5 avg.) | TBD % |
-| Final success rate after Self-Correcting | TBD % |
-| Improvement | +TBD pp |
-| Main failure types (% of all failures) | syntax_error: TBD%, dependency_error: TBD% |
-| syntax_error recovery rate | TBD % |
-| dependency_error recovery rate | TBD % |
-| Average retries per scenario | TBD |
+| Initial success rate (Claude Sonnet 4.5 avg.) | **69.63%** |
+| Final success rate after Self-Correcting | **84.22%** |
+| Improvement | **+14.59 pp** |
+| Main failure types (% of all failures) | `syntax_error`: 51.5%, `dependency_error`: 24.6% |
+| `syntax_error` recovery rate | 41.22% |
+| `dependency_error` recovery rate | 27.35% |
+| `missing_env` recovery rate | **61.29%** |
+| `timeout` recovery rate | 15.38% |
+| Average retries per scenario | 2.85 |

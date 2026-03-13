@@ -53,6 +53,19 @@ CALDERA_AGENT_TIMEOUT=300           # Seconds to wait for agent connection
 
 ---
 
+## Target Environment (Windows VMs)
+
+| VM | Role | OS |
+|----|------|----|
+| PC1 | Primary target (victim) | Windows 10 Pro 1803 |
+| PC2 | Lateral movement pivot | Windows 10 |
+| PC3 | Active Directory server | Windows Server 2019 |
+
+{: .note }
+Pre-configured VirtualBox OVA files for all three VMs will be made available for download after paper publication. Each OVA includes the required software, Caldera agent, and per-scenario snapshots.
+
+---
+
 ## VM Configuration
 
 Required for Step 5 (Self-Correcting with snapshot restore):
