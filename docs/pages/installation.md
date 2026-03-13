@@ -26,7 +26,7 @@ nav_order: 3
 
 ---
 
-## 1. Clone the Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/alpakalee/caldera-attack-automation.git
@@ -35,7 +35,7 @@ cd caldera-attack-automation
 
 ---
 
-## 2. Install Python Dependencies
+## Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -56,7 +56,7 @@ Key dependencies:
 
 ---
 
-## 3. Configure Environment Variables
+## Configure Environment Variables
 
 ```bash
 cp .env.example .env
@@ -66,7 +66,7 @@ Edit `.env` with your settings. See [Configuration]({{ site.baseurl }}/pages/con
 
 ---
 
-## 4. Set Up MITRE Caldera
+## Set Up MITRE Caldera
 
 Install Caldera on a Linux server (Ubuntu 20.04 LTS recommended):
 
@@ -78,11 +78,30 @@ python server.py --insecure
 ```
 
 {: .note }
-Caldera runs on port 8888 by default. The system also uses port 34444 for payload delivery.
+Caldera runs on port **8888** by default.
 
 ---
 
-## 5. Set Up Target VMs
+## Set Up the Attacker Server
+
+The pipeline includes a separate lightweight HTTP server (`환경 설계/attacker_server/server.py`) that serves payload files (Caldera agent, web shell, tools) to target VMs. This is **not** Caldera — it runs independently on port **34444**.
+
+```bash
+python 환경\ 설계/attacker_server/server.py
+```
+
+In the environment specification files (`environment_ttps{1-11}.md`), this server is referenced as:
+
+```
+## Attacker Server (192.168.56.1:34444)
+- GET /agents/* : Download files required for the victim's PC
+```
+
+Configure the attacker server's IP and port in `.env` to match your network setup.
+
+---
+
+## Set Up Target VMs
 
 Each TTP scenario requires specific VM configurations. See `environment_ttps{1-11}.md` for per-scenario requirements.
 
@@ -96,11 +115,11 @@ Disable Windows Defender real-time protection on target VMs before running exper
 
 ---
 
-## 6. Verify Installation
+## Verify Installation
 
 ```bash
 # Test LLM connection
-python -c "from modules.ai.factory import LLMFactory; print('LLM OK')"
+python -c "from modules.ai.factory import get_llm_client; print('LLM OK')"
 
 # Test Caldera connection
 python -c "

@@ -49,31 +49,6 @@ The system consists of four functional layers:
 
 ![System Architecture](assets/images/system-architecture.png)
 
-```
-┌──────────────────────────────────────────────────────┐
-│  Input: CTI Report (PDF) + Environment Specification │
-└──────────────────┬───────────────────────────────────┘
-                   │
-┌──────────────────▼───────────────────────────────────┐
-│  LLM-based Scenario Generation (Steps 1–4)           │
-│  Step 1: PDF Text Extraction                         │
-│  Step 2: Abstract Attack Flow  (env-independent)     │
-│  Step 3: Concrete Attack Flow  (env-specific)        │
-│  Step 4: Caldera Ability & Adversary Generation      │
-└──────────────────┬───────────────────────────────────┘
-                   │
-┌──────────────────▼───────────────────────────────────┐
-│  Caldera Execution Layer                             │
-│  Upload via REST API → Execute → Collect Results     │
-└──────────────────┬───────────────────────────────────┘
-                   │
-┌──────────────────▼───────────────────────────────────┐
-│  Self-Correction Layer (Step 5)                      │
-│  5-type Failure Classification → LLM Fix → Retry    │
-│  Max 3 retries · VM snapshot restore per attempt    │
-└──────────────────────────────────────────────────────┘
-```
-
 ### Comparison with Prior Work
 
 Our system is the only approach that satisfies all six requirements simultaneously:
@@ -170,8 +145,8 @@ Experiments conducted on **11 KISA CTI reports × 4 LLMs × 5 runs = 220 total e
 **Requirements**: Python 3.10.11 · MITRE Caldera 5.3.0 · VirtualBox · LLM API key (Anthropic / OpenAI / Google / xAI)
 
 ```bash
-git clone https://github.com/alpakalee/caldera-attack-automation.git
-cd caldera-attack-automation
+git clone https://github.com/alpakalee/testcaldera.git
+cd testcaldera
 pip install -r requirements.txt
 cp .env.example .env   # fill in API keys and VM config
 ```
@@ -214,17 +189,6 @@ We evaluate on all **11 KISA CTI reports** (2020–2024), covering ransomware, A
 | TTPs#11 | Operation An Octopus – Management Solution Attack | Expert |
 
 ---
-
-## Citation
-
-```bibtex
-@inproceedings{TBD,
-  title   = {Automatic End-to-End Adversary Emulation with Self-Correction
-             from Cyber Threat Intelligence Using LLM},
-  author  = {Author 1 and Author 2 and Author 3 and Author 4 and Author 5},
-  year    = {2025}
-}
-```
 
 ---
 

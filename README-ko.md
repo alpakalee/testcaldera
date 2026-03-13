@@ -292,21 +292,6 @@ caldera-attack-automation/
 
 ---
 
-## 인용
-
-본 연구를 활용하시는 경우 아래와 같이 인용해 주세요:
-
-```bibtex
-@inproceedings{TBD,
-  title     = {Automatic End-to-End Adversary Emulation with Self-Correction
-               from Cyber Threat Intelligence Using LLM},
-  author    = {Anonymous Author(s)},
-  booktitle = {Proceedings of the ACM on Programming Languages (OOPSLA)},
-  year      = {2025},
-  doi       = {XXXXXXX.XXXXXXX}
-}
-```
-
 ---
 
 ## 라이선스
