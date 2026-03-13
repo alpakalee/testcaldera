@@ -21,8 +21,10 @@ env/
 .DS_Store
 Thumbs.db
 
-# Results
-data/processed/
+# Data (not tracked — see README for download instructions)
+data/
 
-data/논문
-reports/plan.md
+# Notes
+논문/
+plan.md
+reports/

@@ -243,6 +243,32 @@ data/processed/{pdf_name}/{version_id}/
 | TTPs#10 | Operation GoldGoblin – Zero-day Intrusion | Zero-day + APT | Expert |
 | TTPs#11 | Operation An Octopus – Management Solution Attack | Supply chain | Expert |
 
+### Data Files
+
+The `data/` directory is not included in this repository. Prepare the following manually:
+
+**`data/raw/`** — KISA CTI PDF reports (11 files)
+
+Download from the [KISA Security Advisories](https://www.kisa.or.kr/):
+
+| File | Report |
+|------|--------|
+| `KISA_TTPs_1.pdf` ~ `KISA_TTPs_11.pdf` | Corresponding KISA TTP reports |
+
+**`data/mitre/`** — MITRE ATT&CK JSON (used for Technique ID validation)
+
+Download from [MITRE ATT&CK releases](https://github.com/mitre/cti/releases):
+
+```
+data/mitre/v15.1.json   # enterprise-attack-15.1.json
+data/mitre/v16.0.json   # enterprise-attack-16.0.json
+data/mitre/v18.1.json   # enterprise-attack-18.1.json
+```
+
+**`data/mapping_table/`** — Ground truth TTP mappings and per-report analysis (used for RQ3 evaluation)
+
+Will be released after paper publication.
+
 ---
 
 ## Project Structure
