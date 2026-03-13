@@ -31,21 +31,11 @@ nav_order: 8
 
 ## System Figures
 
-<!-- Uncomment when images are available:
-
 ### System Overview
 ![System Overview]({{ site.baseurl }}/assets/images/system-overview.png)
 
 ### 5-Step Pipeline Architecture
 ![Pipeline Architecture]({{ site.baseurl }}/assets/images/system-architecture.png)
-
-### Self-Correcting Flow
-![Self-Correcting Flow]({{ site.baseurl }}/assets/images/self-correction-flow.png)
-
-### Example: TTPs#1 Attack Dependency Graph
-![TTPs#1 Dependency Graph]({{ site.baseurl }}/assets/images/ttps1-dependency-graph.png)
-
--->
 
 ---
 

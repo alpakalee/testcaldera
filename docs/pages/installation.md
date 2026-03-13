@@ -29,8 +29,8 @@ nav_order: 3
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/alpakalee/caldera-attack-automation.git
-cd caldera-attack-automation
+git clone https://github.com/alpakalee/testcaldera.git
+cd testcaldera
 ```
 
 ---

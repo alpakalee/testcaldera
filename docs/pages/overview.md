@@ -74,7 +74,7 @@ Step 4: Caldera Ability & Adversary Generation
 - Poll for completion (5-second intervals)
 - Collect results: exit code, stdout, stderr per ability
 
-Caldera server also runs an HTTP server on port 34444 for payload delivery and data exfiltration endpoints.
+A separate Attacker Server (`환경 설계/attacker_server/server.py`) runs on port **34444** to serve payload files (Caldera agent, web shell, tools) to target VMs. This is independent of the Caldera server.
 
 ### Layer 4: Self-Correction (Step 5)
 

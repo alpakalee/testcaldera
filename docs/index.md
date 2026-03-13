@@ -189,9 +189,7 @@ We evaluate on all **11 KISA CTI reports** (2020–2024), covering ransomware, A
 
 ---
 
----
-
 <div style="text-align: center; color: #888; font-size: 0.85em; margin-top: 2em;">
-This project is licensed under the <a href="https://github.com/alpakalee/caldera-attack-automation/blob/main/LICENSE">MIT License</a>.
+This project is licensed under the <a href="https://github.com/alpakalee/testcaldera/blob/main/LICENSE">MIT License</a>.
 For educational and authorized security research purposes only.
 </div>
